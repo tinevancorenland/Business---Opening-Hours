@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Shadows+Into+Light&display=swap");
+
+#message {
+  font-family: "Shadows Into Light";
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+#clockDate {
+  background-color: black;
+  padding: 10px;
+  border: 1px solid;
+  margin: auto;
+  width: 90%;
+}
+
+#clock {
+  font-family: "Oswald";
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+#date {
+  font-family: "Shadows into light";
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+#openingHours {
+  padding: 10px;
+  border: 1px solid;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+}
+
+th {
+  height: 40px;
+  font-family: "Shadows Into Light";
+  font-size: 24px;
+  text-align: center;
+  font-weight: normal;
+}
+
+td {
+  font-family: "Shadows Into Light";
+  font-size: 18px;
+  text-align: left;
+}
+
+.hours {
+  text-align: right;
+  font-family: "Oswald";
+}
+
+@media screen and (min-width: 576px) {
+  #message,
+  #clockDate {
+    width: 60%;
+  }
+  table#openingHours {
+    width: 40%;
+  }
+}
