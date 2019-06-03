@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald|Shadows+Into+Light&display=swap");
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #message {
   font-family: "Shadows Into Light";
   font-size: 20px;
@@ -40,6 +45,7 @@
   text-align: center;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 90%;
 }
 

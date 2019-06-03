@@ -5,8 +5,6 @@ function startTime() {
   var h = today.getHours();
   var m = today.getMinutes();
   m = checkTime(m);
-  document.getElementById("clock").innerHTML = h + ":" + m;
-
   var months = [
     "January",
     "February",
@@ -35,16 +33,11 @@ function startTime() {
   var curMonth = months[today.getMonth()];
   var curYear = today.getFullYear();
   var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
-  document.getElementById("date").innerHTML = date;
 
+  document.getElementById("clock").innerHTML = h + ":" + m;
   var t = setTimeout(startTime, 45000);
 
-  if (curWeekDay > 0 && curWeekDay <= 6 && h >= 9 && h < 17) {
-    document.getElementById("message").innerHTML = "Hi there, we are open!";
-  } else {
-    document.getElementById("message").innerHTML =
-      "Sorry, we are closed. Please check our opening hours as listed below.";
-  }
+  document.getElementById("date").innerHTML = date;
 }
 
 function checkTime(i) {
@@ -52,4 +45,15 @@ function checkTime(i) {
     i = "0" + i;
   }
   return i;
+}
+
+function OpenClose() {
+  var today = new Date();
+
+  if (0 < today.getDay > 6 && 8 <= today.getHours < 17) {
+    document.getElementById("message").innerHTML = "Hi there, we are open!";
+  } else {
+    document.getElementById("message").innerHTML =
+      "Sorry, we are closed. Please check our opening hours as listed below.";
+  }
 }
