@@ -50,10 +50,16 @@ function checkTime(i) {
 function OpenClose() {
   var today = new Date();
 
-  if (0 < today.getDay > 6 && 8 <= today.getHours < 17) {
+  if (today.getDay == 0 || today.getDay == 6) {
+    document.getElementById("message").innerHTML = "Sorry we are closed!";
+  } else if (8 >= today.getHours <= 17) {
     document.getElementById("message").innerHTML = "Hi there, we are open!";
-  } else {
-    document.getElementById("message").innerHTML =
-      "Sorry, we are closed. Please check our opening hours as listed below.";
   }
+
+  //   if (0 < today.getDay > 6 && 8 <= today.getHours < 17) {
+  //     document.getElementById("message").innerHTML = "Hi there, we are open!";
+  //   } else {
+  //     document.getElementById("message").innerHTML =
+  //       "Sorry, we are closed. Please check our opening hours as listed below.";
+  //   }
 }

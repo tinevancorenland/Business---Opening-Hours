@@ -1,3 +1,3 @@
 # Serious-Business
 
-[Business](https://www.example.com)
+[Business](https://tinevancorenland.github.io/Serious-Business/)
