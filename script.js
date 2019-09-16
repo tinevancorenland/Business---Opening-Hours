@@ -55,11 +55,17 @@ function OpenClose() {
   } else if (8 >= today.getHours <= 17) {
     document.getElementById("message").innerHTML = "Hi there, we are open!";
   }
+}
 
-  //   if (0 < today.getDay > 6 && 8 <= today.getHours < 17) {
-  //     document.getElementById("message").innerHTML = "Hi there, we are open!";
-  //   } else {
-  //     document.getElementById("message").innerHTML =
-  //       "Sorry, we are closed. Please check our opening hours as listed below.";
-  //   }
+// Close early
+
+var closeButton = document.getElementById("closeButton");
+
+closeButton.addEventListener("click", closeEarly);
+
+function closeEarly() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  console.log("close now" + h + m);
 }
