@@ -57,16 +57,20 @@ th {
   font-weight: normal;
 }
 
-td {
+.days {
   font-family: "Shadows Into Light";
   font-size: 18px;
   text-align: left;
-  padding: 0, 20px;
 }
 
-.hours, .hoursStop {
-  text-align: right;
+td {
+  text-align: center;
   font-family: "Oswald";
+  padding: 0px 10px;
+}
+
+.today {
+  color: blue;
 }
 
 #closeButton {

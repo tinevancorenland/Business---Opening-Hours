@@ -97,7 +97,8 @@ function tableDays() {
   }
 }
 
-// Close early on press button
+
+// Close early on press button - NOT FINISHED
 
 var closeButton = document.getElementById("closeButton");
 
@@ -109,7 +110,7 @@ function closeEarly() {
   console.log(days);
   console.log(curWeekDay)
   console.log(dayClosing);
-  // closeButton.innerHTML = "Closed this " + curWeekDay + " at " + h + ":" + m;
+  closeButton.innerHTML = "Closing now: " + curWeekDay + " at " + h + ":" + m;
 
 }
 
