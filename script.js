@@ -105,7 +105,12 @@ closeButton.addEventListener("click", closeEarly);
 
 function closeEarly() {
   console.log("close now" + h + m + curWeekDay);
+  var dayClosing = days.includes(curWeekDay);
+  console.log(days);
+  console.log(curWeekDay)
+  console.log(dayClosing);
   // closeButton.innerHTML = "Closed this " + curWeekDay + " at " + h + ":" + m;
+
 }
 
 
