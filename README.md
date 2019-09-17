@@ -1,4 +1,4 @@
-# Serious-Business
+# Business Opening Hours
 
 ## Objectives
 
