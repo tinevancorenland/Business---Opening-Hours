@@ -25,6 +25,24 @@ var days = [
   "Friday",
   "Saturday"
 ];
+var businessHoursStart = [
+  "closed",
+  "9",
+  "9",
+  "9",
+  "9",
+  "9",
+  "closed"
+];
+var businessHoursStop = [
+  " ",
+  "17",
+  "17",
+  "17",
+  "17",
+  "17",
+  " "
+];
 var curWeekDay = days[today.getDay()];
 var curDay = today.getDate();
 var curMonth = months[today.getMonth()];
@@ -61,7 +79,21 @@ function OpenClose() {
     document.getElementById("message").innerHTML = "Hi there, we are open!";
   } else {
     document.getElementById("message").innerHTML = "Sorry we are closed!";
+  }
+  tableDays();
+}
 
+// get table days and change to variables
+
+var dayCells = document.getElementsByClassName("days");
+var startHourCells = document.getElementsByClassName("hours");
+var stopHourCells = document.getElementsByClassName("hoursStop");
+
+function tableDays() {
+  for (a=0; a<dayCells.length; a++){
+    dayCells[a].innerHTML = days[a];
+    startHourCells[a].innerHTML = businessHoursStart[a];
+    stopHourCells[a].innerHTML = businessHoursStop[a];
   }
 }
 
@@ -73,17 +105,7 @@ closeButton.addEventListener("click", closeEarly);
 
 function closeEarly() {
   console.log("close now" + h + m + curWeekDay);
-  closeButton.innerHTML = "Closed this " + curWeekDay + " at " + h + ":" + m;
+  // closeButton.innerHTML = "Closed this " + curWeekDay + " at " + h + ":" + m;
 }
 
-// get table days and change to variables
 
-var dayCells = document.getElementsByClassName("days");
-
-dayCells[0].innerHTML = days[1];
-dayCells[1].innerHTML = days[2];
-dayCells[2].innerHTML = days[3];
-dayCells[3].innerHTML = days[4];
-dayCells[4].innerHTML = days[5];
-dayCells[5].innerHTML = days[6];
-dayCells[6].innerHTML = days[7];
