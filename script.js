@@ -1,7 +1,7 @@
 var today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
-m = checkTime(m);
+
 var months = [
   "January",
   "February",
@@ -53,18 +53,14 @@ var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
 // liveClock that shows current time
 
 function startTime() {
-
-  document.getElementById("clock").innerHTML = h + ":" + m;
-  var t = setTimeout(startTime, 45000);
-
-  document.getElementById("date").innerHTML = date;
-}
-
-function checkTime(i) {
-  if (i < 10) {
-    i = "0" + i;
+  if(m < 10) {
+    document.getElementById("clock").innerHTML = h + ":0" + m;
+  } else {
+    document.getElementById("clock").innerHTML = h + ":" + m;
   }
-  return i;
+    
+  var t = setTimeout(startTime, 45000);
+  document.getElementById("date").innerHTML = date;
 }
 
 // message stating we are open or closed
