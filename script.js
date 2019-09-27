@@ -50,7 +50,7 @@ var curYear = today.getFullYear();
 var date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
 
 
-// liveClock that shows current time
+// liveClock that shows current time and date
 
 function startTime() {
   if(m < 10) {
